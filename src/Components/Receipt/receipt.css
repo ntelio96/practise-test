@@ -1,0 +1,24 @@
+.receipt__container{
+    width: var(--container-width-lg);
+    padding: 1.5rem 0;
+    position: fixed;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.total__price{
+    width: max-content;
+    display: flex;
+    align-content: center;
+    gap: 1rem;
+}
+
+.receipt__container > button{
+    display: flex;
+   justify-content: flex-end;
+}
+
+

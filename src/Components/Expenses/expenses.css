@@ -1,0 +1,40 @@
+.expenses__container{
+    display: flex;
+    width: var(--container-width-lg);
+    height: 5rem;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 1.5rem 0;
+    border-radius: 0.4rem;
+}
+
+.expenses__container > button{
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-gold);
+    background-color: var(--color-primary);
+    
+}
+
+select{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    border-radius: 0.4rem;
+    height: 3rem;
+    font-size: 1rem;
+    /* color: var(--color-gold); */
+}
+
+select::after{
+    color: var(--color-gold);
+
+}
+
+select::marker{
+    color: var(--color-gold);
+}
+
+select::backdrop{
+    color: var(--color-gold);
+}
