@@ -1,8 +1,13 @@
 import React from 'react'
+import { useState } from 'react'
 import './expenses.css'
 
 
 function Expenses() {
+
+  const [name, setName] = useState('')
+  const [price, setPrice]= useState('')
+
   return (
   <>
   <div className='container expenses__container'>
@@ -14,7 +19,12 @@ function Expenses() {
     </select>
     <button className='btn'>Add Expense</button>
   </div>
-  
+  <div className='container inputs__container'>
+    <div className='input-fields'>
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Expense name"/>
+        <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Value €"/>
+    </div>
+  </div>
   </>
   )
 }

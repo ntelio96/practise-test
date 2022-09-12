@@ -4,7 +4,7 @@
     height: 5rem;
     align-items: center;
     background-color: var(--color-primary);
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     border-radius: 0.4rem;
 }
 
@@ -23,18 +23,26 @@ select{
     border-radius: 0.4rem;
     height: 3rem;
     font-size: 1rem;
-    /* color: var(--color-gold); */
 }
 
-select::after{
-    color: var(--color-gold);
-
+.inputs__container{
+    display: flex;
+    width: 70%;
+    height: 3rem;
+    align-items: center;
+    background-color: var(--color-white-variant);
 }
 
-select::marker{
-    color: var(--color-gold);
+.input-fields{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 74% 25%;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
 }
 
-select::backdrop{
-    color: var(--color-gold);
+input {
+    border: 1px solid lightgray;
+    height: 2rem;
 }
+
