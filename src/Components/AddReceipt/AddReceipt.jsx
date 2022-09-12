@@ -1,5 +1,5 @@
 import React from 'react'
-import './receipt.css'
+import './addReceipt.css'
 
 
 function Receipt({addExpense}) {

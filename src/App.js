@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import Expenses from "./Components/Expenses/Expenses";
 import ProductListItem from "./Components/ProductListItem/ProductListItem";
-import Receipt from "./Components/Receipt/Receipt";
+import AddReceipt from "./Components/AddReceipt/AddReceipt";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [expense, setExpense] = useState([])
+  const [expense, setExpense] = useState([]);
+
 
   const addExpense = e => {
     setExpense([...expense, e])
@@ -15,6 +16,8 @@ function App() {
   const addProduct = (product) => {
     setProducts([...products, product]);
   };
+
+
 
   return (
     <div className="App-header">
@@ -25,7 +28,7 @@ function App() {
       {
         expense.map(i => <Expenses key={i} />)
       }
-      <Receipt addExpense = {addExpense}/>
+      <AddReceipt addExpense = {addExpense}/>
     </div>
   );
 }
