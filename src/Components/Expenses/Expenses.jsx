@@ -17,7 +17,8 @@ function Expenses() {
       <option value="2">Houseware</option>
       <option value="3">Entertainment</option>
     </select>
-    <button className='btn'>Add Expense</button>
+    <div className="move__btn"><button className='btn btn-secondary'>Add Expense</button></div>
+    
   </div>
   <div className='container inputs__container'>
     <div className='input-fields'>

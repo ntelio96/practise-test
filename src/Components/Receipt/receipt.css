@@ -1,6 +1,6 @@
 .receipt__container{
     width: var(--container-width-lg);
-    padding: 1.5rem 0;
+    padding: 0.5rem 0;
     position: fixed;
     bottom: 2rem;
     display: flex;
@@ -15,10 +15,15 @@
     align-content: center;
     gap: 1rem;
 }
-
-.receipt__container > button{
+.move__bot__btn{
     display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.btn-primary{
    justify-content: flex-end;
+   background-color: var(--color-gold);
 }
 
 /* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */

@@ -8,20 +8,24 @@
     border-radius: 0.4rem;
 }
 
-.expenses__container > button{
+.move__btn{
     display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.move__btn > .btn-secondary{
     align-items: center;
     border: 2px solid var(--color-gold);
     background-color: var(--color-primary);
-    
 }
 
 select{
     display: flex;
     align-items: center;
-    width: 35%;
+    width: 40%;
     border-radius: 0.4rem;
-    height: 3rem;
+    height: 2.5rem;
     font-size: 1rem;
     padding-left: 0.5rem;
 }
@@ -55,7 +59,7 @@ input {
         width: var(--container-width-md);
     }
     select{
-        width: 40%;
+        width: 50%;
     }
     .inputs__container{
         width: 82%;
@@ -68,7 +72,7 @@ input {
         width: var(--container-width-sm);
     }
     select{
-        width: 50%;
+        width: 80%;
     }
     .inputs__container{
         width: 90%;

@@ -10,7 +10,9 @@ function Receipt() {
         <p>Total</p>
         <h3>€</h3>
     </div>
-    <button className='btn btn-primary'>Add receipt</button>
+    <div className="move__bot__btn">
+      <button className='btn btn-primary'>Add receipt</button>
+    </div>
   </div>
   </>
   )
