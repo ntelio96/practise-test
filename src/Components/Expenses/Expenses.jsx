@@ -21,9 +21,9 @@ function Expenses(addProductProp) {
   <div className='container expenses__container'>
     <select>
       <option value="" selected disabled hidden>Select</option>
-      <option value="1">Food</option>
-      <option value="2">Houseware</option>
-      <option value="3">Entertainment</option>
+      <option value="Food">Food</option>
+      <option value="Houseware">Houseware</option>
+      <option value="Entertainment">Entertainment</option>
     </select>
     <div className="move__btn">
       <button className='btn btn-secondary' onClick={addProduct1}>Add Expense</button>
