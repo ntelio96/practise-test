@@ -1,8 +1,9 @@
 .receipt__container{
-    width: var(--container-width-lg);
+    width: calc(var(--container-width-lg) + 0.2rem);
+    background-color: var(--color-white);
     padding: 0.5rem 0;
     position: fixed;
-    bottom: 2rem;
+    bottom: 0rem;
     display: flex;
     align-items: center;
     left: 50%;
@@ -36,7 +37,7 @@
    /* ------------MEDIA QUERIES (small DEVICES)---------------- */
    @media screen and (max-width: 600px){
     .receipt__container{
-        width: var(--container-width-sm);
+        width: calc(var(--container-width-sm) + 0.2rem);
     }
    }
 

@@ -6,6 +6,11 @@ import Receipt from "./Components/Receipt/Receipt";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [expense, setExpense] = useState([])
+
+  const addExpense = e => {
+    setExpense([...expense, e])
+  }
 
   const addProduct = (product) => {
     setProducts([...products, product]);
@@ -17,7 +22,10 @@ function App() {
       {products.map((product, i) => (
         <ProductListItem key={i} item={product} />
       ))}
-      <Receipt />
+      {
+        expense.map(i => <Expenses key={i} />)
+      }
+      <Receipt addExpense = {addExpense}/>
     </div>
   );
 }
