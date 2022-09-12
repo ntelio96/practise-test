@@ -17,7 +17,7 @@ function App() {
     <div className="App-header">
       <Expenses addProductProp={addProduct}/>
       {
-        products.map((product, i) => <ProductListItem key={i}>item={product}</ProductListItem>)
+        products.map((product, i) => <ProductListItem key={i} item={product}/>)
       }
       <Receipt/>
     </div>
