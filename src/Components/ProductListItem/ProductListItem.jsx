@@ -1,14 +1,12 @@
-import React from 'react'
+import React from "react";
 
-
-function ProductListItem(item) {
-
+function ProductListItem({ item }) {
   return (
-  <>
-    <div>{item.name}</div>
-    <div>{item.price}</div>
-  </>
-  )
+    <>
+      <div>{item.name}</div>
+      <div>{item.price}</div>
+    </>
+  );
 }
 
-export default ProductListItem
+export default ProductListItem;
