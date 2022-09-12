@@ -3,6 +3,7 @@ import "./App.css";
 import Expenses from "./Components/Expenses/Expenses";
 import ProductListItem from "./Components/ProductListItem/ProductListItem";
 import AddReceipt from "./Components/AddReceipt/AddReceipt";
+import Receipt from "./Components/AddReceipt/AddReceipt";
 
 function App() {
   const [products, setProducts] = useState([]);
