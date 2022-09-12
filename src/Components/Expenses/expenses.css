@@ -19,10 +19,11 @@
 select{
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 35%;
     border-radius: 0.4rem;
     height: 3rem;
     font-size: 1rem;
+    padding-left: 0.5rem;
 }
 
 .inputs__container{
@@ -44,5 +45,32 @@ select{
 input {
     border: 1px solid lightgray;
     height: 2rem;
+    padding: 0 0.3rem;
 }
 
+
+/* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
+@media screen and (max-width: 1024px){
+    .expenses__container{
+        width: var(--container-width-md);
+    }
+    select{
+        width: 40%;
+    }
+    .inputs__container{
+        width: 82%;
+    }
+   }
+   
+   /* ------------MEDIA QUERIES (small DEVICES)---------------- */
+   @media screen and (max-width: 600px){
+    .expenses__container{
+        width: var(--container-width-sm);
+    }
+    select{
+        width: 50%;
+    }
+    .inputs__container{
+        width: 90%;
+    }
+   }

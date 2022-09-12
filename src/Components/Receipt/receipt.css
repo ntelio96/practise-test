@@ -21,4 +21,17 @@
    justify-content: flex-end;
 }
 
+/* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
+@media screen and (max-width: 1024px){
+    .receipt__container{
+        width: var(--container-width-md);
+    }
+   }
+   
+   /* ------------MEDIA QUERIES (small DEVICES)---------------- */
+   @media screen and (max-width: 600px){
+    .receipt__container{
+        width: var(--container-width-sm);
+    }
+   }
 

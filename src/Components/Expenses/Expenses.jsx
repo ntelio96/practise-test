@@ -12,7 +12,7 @@ function Expenses() {
   <>
   <div className='container expenses__container'>
     <select>
-      <option value="" selected disabled hidden>Choose here</option>
+      <option value="" selected disabled hidden>Select</option>
       <option value="1">Food</option>
       <option value="2">Houseware</option>
       <option value="3">Entertainment</option>
