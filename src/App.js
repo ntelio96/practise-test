@@ -7,7 +7,7 @@ import Receipt from './Components/Receipt/Receipt';
 
 function App() {
 
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
 
   const addProduct = product => {
     setProducts([...products, product])

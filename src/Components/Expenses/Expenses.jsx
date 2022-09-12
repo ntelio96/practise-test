@@ -8,7 +8,7 @@ function Expenses(addProductProp) {
   const [name, setName] = useState('')
   const [price, setPrice]= useState('')
 
-  const addProduct1 = _ => {
+  const addProduct = _ => {
     addProductProp({
       name, price
   })
@@ -26,7 +26,7 @@ function Expenses(addProductProp) {
       <option value="Entertainment">Entertainment</option>
     </select>
     <div className="move__btn">
-      <button className='btn btn-secondary' onClick={addProduct1}>Add Expense</button>
+      <button className='btn btn-secondary' onClick={addProduct}>Add Expense</button>
     </div>
   </div>
   <div className='container inputs__container'>
