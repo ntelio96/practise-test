@@ -3,10 +3,18 @@ import { useState } from 'react'
 import './expenses.css'
 
 
-function Expenses() {
+function Expenses(addProductProp) {
 
   const [name, setName] = useState('')
   const [price, setPrice]= useState('')
+
+  const addProduct1 = _ => {
+    addProductProp({
+      name, price
+  })
+    setName('')
+    setPrice('')
+  }
 
   return (
   <>
@@ -17,8 +25,9 @@ function Expenses() {
       <option value="2">Houseware</option>
       <option value="3">Entertainment</option>
     </select>
-    <div className="move__btn"><button className='btn btn-secondary'>Add Expense</button></div>
-    
+    <div className="move__btn">
+      <button className='btn btn-secondary' onClick={addProduct1}>Add Expense</button>
+    </div>
   </div>
   <div className='container inputs__container'>
     <div className='input-fields'>
