@@ -4,35 +4,22 @@ import "./receipts.css";
 import ExpenseListItem from "../ExpenseListItem/ExpenseListItem";
 import Sum from "../Sum/Sum";
 
-function Receipts() {
+function Receipts({onSumChange}) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [check, setCheck] = useState(false);
   const [expenses, setExpenses] = useState([]);
   const [sum, setSum] = useState(0);
-  const [total, setTotal] = useState(0)
-
-  // const totalPrice = () => {
-  //   const allSum = []
-  //   allSum.push(sum.length)
-  //   setTotal(allSum.reduce(
-  //     (previousValue, currentValue) => Number(previousValue) + Number(currentValue.price), 0
-  //   ));
-  //   console.log(total)
-  // }
-
-  // useEffect(() => {
-  //   totalPrice()
-  // })
+ 
 
   useEffect(() => {
     calculateSum();
+    onSumChange(sum)
   });
 
   const calculateSum = () => {
-    let sum = 0;
     setSum(expenses.reduce(
-      (previousValue, currentValue) => Number(previousValue) + Number(currentValue.price), sum
+      (previousValue, currentValue) => Number(previousValue) + Number(currentValue.price), 0
     ));
     
     

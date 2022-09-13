@@ -1,7 +1,7 @@
 import React from "react";
 import "./bottomBar.css";
 
-function BottomBar({ addReceipt }, { total }) {
+function BottomBar({ addReceipt, total}) {
   return (
     <>
       <div className="container bottom-bar__container">
@@ -10,7 +10,7 @@ function BottomBar({ addReceipt }, { total }) {
           <h3>€ {total}</h3>
         </div>
         <div className="move__bot__btn">
-          <button className="btn btn-primary" onClick={addReceipt}>
+          <button className="btn btn__primary" onClick={addReceipt}>
             Add receipt
           </button>
         </div>
