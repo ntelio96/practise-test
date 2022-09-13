@@ -10,6 +10,20 @@ function Receipts() {
   const [check, setCheck] = useState(false);
   const [expenses, setExpenses] = useState([]);
   const [sum, setSum] = useState(0);
+  const [total, setTotal] = useState(0)
+
+  // const totalPrice = () => {
+  //   const allSum = []
+  //   allSum.push(sum.length)
+  //   setTotal(allSum.reduce(
+  //     (previousValue, currentValue) => Number(previousValue) + Number(currentValue.price), 0
+  //   ));
+  //   console.log(total)
+  // }
+
+  // useEffect(() => {
+  //   totalPrice()
+  // })
 
   useEffect(() => {
     calculateSum();
