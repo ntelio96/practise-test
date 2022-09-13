@@ -1,0 +1,95 @@
+.receipts__container {
+  display: flex;
+  width: var(--container-width-lg);
+  height: 5rem;
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: 1.5rem 1rem;
+  border-radius: 0.4rem;
+  margin: 0.5rem auto;
+}
+
+.move__btn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.move__btn > .btn-secondary {
+  align-items: center;
+  border: 2px solid var(--color-gold);
+  background-color: var(--color-primary);
+}
+
+select {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border-radius: 0.4rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+option:hover {
+  background-color: yellow;
+  color: var(--color-white);
+}
+
+.inputs__container {
+  display: flex;
+  width: 70%;
+  height: 3rem;
+  align-items: center;
+  background-color: var(--color-white-variant);
+}
+
+.input-fields {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 74% 25%;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+input {
+  border: 1px solid lightgray;
+  height: 2rem;
+  padding: 0 0.3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
+@media screen and (max-width: 1024px) {
+  .receipts__container {
+    width: var(--container-width-md);
+  }
+  select {
+    width: 50%;
+  }
+  .inputs__container {
+    width: 82%;
+  }
+}
+
+/* ------------MEDIA QUERIES (small DEVICES)---------------- */
+@media screen and (max-width: 600px) {
+  .receipts__container {
+    width: var(--container-width-sm);
+  }
+  select {
+    width: 80%;
+  }
+  .inputs__container {
+    width: 90%;
+  }
+}

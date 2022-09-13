@@ -1,0 +1,41 @@
+.expenses__container {
+  display: flex;
+  width: 70%;
+  height: 3rem;
+  align-items: center;
+  background-color: var(--color-white-variant);
+}
+
+.expenses__field {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 74% 25%;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.expenses__field > div {
+  border: 1px solid lightgray;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding-right: 0.2rem;
+}
+
+.expenses__field > div:last-child {
+  justify-content: flex-end;
+}
+
+/* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
+@media screen and (max-width: 1024px) {
+  .expenses__container {
+    width: 82%;
+  }
+}
+
+/* ------------MEDIA QUERIES (small DEVICES)---------------- */
+@media screen and (max-width: 600px) {
+  .expenses__container {
+    width: 90%;
+  }
+}
