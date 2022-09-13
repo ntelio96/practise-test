@@ -2,7 +2,7 @@ import React from 'react'
 import './addReceipt.css'
 
 
-function Receipt({addExpense}, {total}) {
+function Receipt({addReceipt}, {total}) {
   return (
   <>
   <div className="container receipt__container">
@@ -11,7 +11,7 @@ function Receipt({addExpense}, {total}) {
         <h3>€ {total}</h3>
     </div>
     <div className="move__bot__btn">
-      <button className='btn btn-primary' onClick={addExpense}>Add receipt</button>
+      <button className='btn btn-primary' onClick={addReceipt}>Add receipt</button>
     </div>
   </div>
   </>

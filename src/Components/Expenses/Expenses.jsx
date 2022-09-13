@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./expenses.css";
 
-function Expenses({ addProduct }) {
+function Expenses({ addExpense }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [check, setCheck] = useState(false);
@@ -11,13 +11,14 @@ function Expenses({ addProduct }) {
     setCheck(true);
   };
 
-  const addProducts = (_) => {
-    addProduct({
+  const addExpenses = (_) => {
+    addExpense({
       name,
       price
     });
     setName("");
     setPrice("");
+    console.log(name, price)
   };
 
   return (
@@ -32,7 +33,7 @@ function Expenses({ addProduct }) {
           <option value="Entertainment">Entertainment</option>
         </select>
         <div className="move__btn">
-          <button className="btn btn-secondary" onClick={addProducts}>
+          <button className="btn btn-secondary" onClick={addExpenses}>
             Add Expense
           </button>
         </div>

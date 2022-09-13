@@ -1,38 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Expenses from "./Components/Expenses/Expenses";
 import ProductListItem from "./Components/ProductListItem/ProductListItem";
 import AddReceipt from "./Components/AddReceipt/AddReceipt";
 import Receipt from "./Components/AddReceipt/AddReceipt";
 
-function App() {
-  const [products, setProducts] = useState([]);
-  const [expense, setExpense] = useState([]);
-  const [total, setTotal] = useState('0')
 
-  const addExpense = e => {
-    setExpense([...expense, e])
+function App() {
+  const [products, setExpenses] = useState([]);
+  const [receipt, setReceipt] = useState([]);
+  const [total, setTotal] = useState(0)
+
+  useEffect(() => {
+    calculateSum()
+  })
+
+  const addReceipt = e => {
+    setReceipt([...receipt, e])
   }
 
-  const addProduct = (product) => {
-    let sum = 0
-    setProducts([...products, product]);
-    // setTotal(products.forEach(element => sum += element.price))
-    // console.log(total)
+  const addExpense = (product) => {
+    setExpenses([...products, product] );
   };
+
+  const calculateSum = () => {
+    let sum = 0
+    setTotal(products.forEach(element => sum += Number(element.price)))
+  }
 
 
 
   return (
     <div className="App-header">
-      <Expenses addProduct={addProduct} />
+      <Expenses addExpense={addExpense} />
       {products.map((product, i) => (
         <ProductListItem key={i} item={product} />
       ))}
       {
-        expense.map(i => <Expenses key={i} />)
+        receipt.map(i => <Expenses key={i} />)
       }
-      <AddReceipt addExpense = {addExpense} total={total}/>
+      <AddReceipt addReceipt = {addReceipt} total={total}/>
     </div>
   );
 }

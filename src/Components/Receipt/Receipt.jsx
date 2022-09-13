@@ -3,7 +3,7 @@
 
 // export const Receipt = () => {
 //   return (
-//     <Expenses addProduct={addProduct} />
+//     <Expenses addExpense={addExpense} />
 //     {products.map((product, i) => (
 //       <ProductListItem key={i} item={product} />
 //     ))}
