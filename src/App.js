@@ -8,14 +8,17 @@ import Receipt from "./Components/AddReceipt/AddReceipt";
 function App() {
   const [products, setProducts] = useState([]);
   const [expense, setExpense] = useState([]);
-
+  const [total, setTotal] = useState('0')
 
   const addExpense = e => {
     setExpense([...expense, e])
   }
 
   const addProduct = (product) => {
+    let sum = 0
     setProducts([...products, product]);
+    // setTotal(products.forEach(element => sum += element.price))
+    // console.log(total)
   };
 
 
@@ -29,7 +32,7 @@ function App() {
       {
         expense.map(i => <Expenses key={i} />)
       }
-      <AddReceipt addExpense = {addExpense}/>
+      <AddReceipt addExpense = {addExpense} total={total}/>
     </div>
   );
 }

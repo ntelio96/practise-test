@@ -1,0 +1,29 @@
+
+.products__container{
+    display: flex;
+    width: 70%;
+    height: 3rem;
+    align-items: center;
+    background-color: var(--color-white-variant);
+}
+
+.products__field{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 74% 25%;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+ 
+}
+
+.products__field > div {
+    border: 1px solid lightgray;
+    height: 2rem;
+    padding: 0 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.products__field > div:last-child {
+    justify-content: flex-end;
+}

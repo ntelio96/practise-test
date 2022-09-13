@@ -11,7 +11,7 @@ function Expenses({ addProduct }) {
     setCheck(true);
   };
 
-  const addProduct1 = (_) => {
+  const addProducts = (_) => {
     addProduct({
       name,
       price
@@ -32,7 +32,7 @@ function Expenses({ addProduct }) {
           <option value="Entertainment">Entertainment</option>
         </select>
         <div className="move__btn">
-          <button className="btn btn-secondary" onClick={addProduct1}>
+          <button className="btn btn-secondary" onClick={addProducts}>
             Add Expense
           </button>
         </div>
