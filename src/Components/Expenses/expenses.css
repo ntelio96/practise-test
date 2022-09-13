@@ -52,11 +52,24 @@ select{
     padding: 0 0.5rem;
 }
 
+
 input {
     border: 1px solid lightgray;
     height: 2rem;
     padding: 0 0.3rem;
 }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
 
 
 /* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */

@@ -13,17 +13,31 @@
     grid-template-columns: 74% 25%;
     gap: 0.5rem;
     padding: 0 0.5rem;
- 
 }
 
 .products__field > div {
     border: 1px solid lightgray;
     height: 2rem;
-    padding: 0 0.3rem;
     display: flex;
     align-items: center;
+    padding-right: 0.2rem;
 }
 
 .products__field > div:last-child {
     justify-content: flex-end;
 }
+
+/* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
+@media screen and (max-width: 1024px){
+    .products__container{
+        width: 82%;
+    }
+    
+   }
+   
+   /* ------------MEDIA QUERIES (small DEVICES)---------------- */
+   @media screen and (max-width: 600px){
+    .products__container{
+        width: 90%;
+    }
+   }
