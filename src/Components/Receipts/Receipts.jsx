@@ -2,22 +2,27 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./receipts.css";
 import ExpenseListItem from "../ExpenseListItem/ExpenseListItem";
+import Sum from "../Sum/Sum";
 
 function Receipts() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [check, setCheck] = useState(false);
   const [expenses, setExpenses] = useState([]);
-  // const [total, setTotal] = useState(0);
+  const [sum, setSum] = useState(0);
 
-  // useEffect(() => {
-  //   calculateSum();
-  // });
+  useEffect(() => {
+    calculateSum();
+  });
 
-  // const calculateSum = () => {
-  //   let sum = 0;
-  //   setTotal(expenses.forEach((element) => (sum += Number(element.price))));
-  // };
+  const calculateSum = () => {
+    let sum = 0;
+    setSum(expenses.reduce(
+      (previousValue, currentValue) => Number(previousValue) + Number(currentValue.price), sum
+    ));
+    
+    
+  };
 
   const checkSelect = () => {
     setCheck(true);
@@ -68,6 +73,7 @@ function Receipts() {
       {expenses.map((product, i) => (
         <ExpenseListItem key={i} item={product} />
       ))}
+     <Sum sum={sum}/>
     </>
   );
 }
