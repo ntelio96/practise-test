@@ -1,7 +1,7 @@
 import React from "react";
 import "./bottomBar.css";
 
-function BottomBar({ addReceipt, total}) {
+function BottomBar({ addReceipt, total }) {
   return (
     <>
       <div className="container bottom-bar__container">

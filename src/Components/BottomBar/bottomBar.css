@@ -11,9 +11,9 @@
 }
 
 .total__price {
-  width: max-content;
+  width: 100%;
   display: flex;
-  align-content: center;
+  align-items: center;
   gap: 1rem;
 }
 .move__bot__btn {
@@ -34,7 +34,6 @@ h3 {
 
 .push__element__up{
   padding: 2rem 0;
-  z-index: -2;
 }
 
 /* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */

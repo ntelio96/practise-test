@@ -4,25 +4,26 @@ import "./receipts.css";
 import ExpenseListItem from "../ExpenseListItem/ExpenseListItem";
 import Sum from "../Sum/Sum";
 
-function Receipts({onSumChange}) {
+function Receipts({ onSumChange }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [check, setCheck] = useState(false);
   const [expenses, setExpenses] = useState([]);
   const [sum, setSum] = useState(0);
- 
 
   useEffect(() => {
     calculateSum();
-    onSumChange(sum)
+    onSumChange(sum);
   });
 
   const calculateSum = () => {
-    setSum(expenses.reduce(
-      (previousValue, currentValue) => Number(previousValue) + Number(currentValue.price), 0
-    ));
-    
-    
+    setSum(
+      expenses.reduce(
+        (previousValue, currentValue) =>
+          Number(previousValue) + Number(currentValue.price),
+        0
+      )
+    );
   };
 
   const checkSelect = () => {
@@ -30,11 +31,21 @@ function Receipts({onSumChange}) {
   };
 
   const addExpenses = (_) => {
-    const newExpense = { name, price };
-    setExpenses([...expenses, newExpense]);
-    setName("");
-    setPrice("");
+    inputFieldCheck(name, price);
   };
+
+  function inputFieldCheck(inputText, inputPrice) {
+    if (inputText != "" && inputPrice != "") {
+      {
+        const newExpense = { name, price };
+        setExpenses([...expenses, newExpense]);
+        setName("");
+        setPrice("");
+      }
+    } else {
+      alert("You have to fill all required fields");
+    }
+  }
 
   return (
     <>
@@ -58,12 +69,14 @@ function Receipts({onSumChange}) {
           <div className="input-fields">
             <input
               type="text"
+              required
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Expense name"
             />
             <input
               type="number"
+              required
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               placeholder="Value €"
@@ -74,7 +87,7 @@ function Receipts({onSumChange}) {
       {expenses.map((product, i) => (
         <ExpenseListItem key={i} item={product} />
       ))}
-     <Sum sum={sum}/>
+      <Sum sum={sum} />
     </>
   );
 }

@@ -3,7 +3,6 @@ import "./App.css";
 import Receipts from "./Components/Receipts/Receipts";
 import BottomBar from "./Components/BottomBar/BottomBar";
 
-
 function App() {
   const [receipt, setReceipt] = useState([]);
   const [total, setTotal] = useState(0);

@@ -9,6 +9,7 @@
   .sum__field {
     width: 100%;
     display: grid;
+    grid-template-rows: auto;
     grid-template-columns: 74% 25%;
     gap: 0.5rem;
     padding: 0 0.5rem;
@@ -18,14 +19,14 @@
     color: var(--color-primary);
     height: 2rem;
     padding-right: 0.2rem;
+   display: flex;
   }
   
   .sum__field > h3 {
     color: var(--color-primary);
+    justify-content: flex-end;
   }
 
-  
-  
   /* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
   @media screen and (max-width: 1024px) {
     .sum__container {
