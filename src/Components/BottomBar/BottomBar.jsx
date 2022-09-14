@@ -15,6 +15,7 @@ function BottomBar({ addReceipt, total}) {
           </button>
         </div>
       </div>
+      <div className="push__element__up"></div>
     </>
   );
 }

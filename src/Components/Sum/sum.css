@@ -20,10 +20,11 @@
     padding-right: 0.2rem;
   }
   
-  .expenses__field > h3 {
+  .sum__field > h3 {
     color: var(--color-primary);
-    
   }
+
+  
   
   /* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
   @media screen and (max-width: 1024px) {

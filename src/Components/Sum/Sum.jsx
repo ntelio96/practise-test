@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import "./sum.css";
 
-function Sum({sum}) {
+function Sum({ sum }) {
   return (
     <>
       <div className="container sum__container">
@@ -11,7 +11,7 @@ function Sum({sum}) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Sum
+export default Sum;
