@@ -31,9 +31,8 @@ select{
     padding-left: 0.5rem;
 }
 
-    option:hover {
-    background-color: yellow;
-    color: var(--color-white);
+select > option {
+   background-color: var(--color-gold);
 }
 
 .inputs__container{
@@ -52,13 +51,11 @@ select{
     padding: 0 0.5rem;
 }
 
-
 input {
     border: 1px solid lightgray;
     height: 2rem;
     padding: 0 0.3rem;
 }
-
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -69,8 +66,6 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
   }
-
-
 
 /* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
 @media screen and (max-width: 1024px){
