@@ -1,44 +1,44 @@
 .sum__container {
-    display: flex;
-    width: 70%;
-    height: 3rem;
-    align-items: center;
-    background-color: var(--color-white-variant);
-  }
-  
-  .sum__field {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-rows: auto;
-    grid-template-columns: 74% 25%;
-    gap: 0.5rem;
-    padding: 0 0.5rem;
-  }
-  
-  .sum__field > div {
-    color: var(--color-primary);
-    align-items: center;
-    height: 2rem;
-    padding-right: 0.2rem;
-   display: flex;
-  }
-  
-  .sum__field > h3 {
-    color: var(--color-primary);
-    justify-content: flex-end;
-  }
+  display: flex;
+  width: 70%;
+  height: 3rem;
+  align-items: center;
+  background-color: var(--color-white-variant);
+}
 
-  /* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
-  @media screen and (max-width: 1024px) {
-    .sum__container {
-      width: 82%;
-    }
+.sum__field {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-rows: auto;
+  grid-template-columns: 74% 25%;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.sum__field > div {
+  color: var(--color-primary);
+  align-items: center;
+  height: 2rem;
+  padding-right: 0.2rem;
+  display: flex;
+}
+
+.sum__field > h3 {
+  color: var(--color-primary);
+  justify-content: flex-end;
+}
+
+/* ------------MEDIA QUERIES (MEDIUM DEVICES)---------------- */
+@media screen and (max-width: 1024px) {
+  .sum__container {
+    width: 82%;
   }
-  
-  /* ------------MEDIA QUERIES (small DEVICES)---------------- */
-  @media screen and (max-width: 600px) {
-    .sum__container {
-      width: 90%;
-    }
+}
+
+/* ------------MEDIA QUERIES (small DEVICES)---------------- */
+@media screen and (max-width: 600px) {
+  .sum__container {
+    width: 90%;
   }
+}

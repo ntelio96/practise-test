@@ -35,12 +35,10 @@ function Receipts({ onSumChange }) {
 
   function inputFieldCheck(inputText, inputPrice) {
     if (inputText !== "" && inputPrice !== "") {
-      
-        const newExpense = { name, price };
-        setExpenses([...expenses, newExpense]);
-        setName("");
-        setPrice("");
-      
+      const newExpense = { name, price };
+      setExpenses([...expenses, newExpense]);
+      setName("");
+      setPrice("");
     } else {
       alert("You have to fill all required fields");
     }
