@@ -9,6 +9,7 @@
   .sum__field {
     width: 100%;
     display: grid;
+    align-items: center;
     grid-template-rows: auto;
     grid-template-columns: 74% 25%;
     gap: 0.5rem;
@@ -17,6 +18,7 @@
   
   .sum__field > div {
     color: var(--color-primary);
+    align-items: center;
     height: 2rem;
     padding-right: 0.2rem;
    display: flex;

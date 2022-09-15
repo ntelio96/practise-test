@@ -31,8 +31,8 @@ select {
   padding-left: 0.5rem;
 }
 
-option:hover {
-  background-color: yellow;
+option::selection {
+  background-color: var(--color-gold);
   color: var(--color-white);
 }
 

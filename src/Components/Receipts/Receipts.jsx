@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./receipts.css";
 import ExpenseListItem from "../ExpenseListItem/ExpenseListItem";
 import Sum from "../Sum/Sum";
@@ -35,13 +34,13 @@ function Receipts({ onSumChange }) {
   };
 
   function inputFieldCheck(inputText, inputPrice) {
-    if (inputText != "" && inputPrice != "") {
-      {
+    if (inputText !== "" && inputPrice !== "") {
+      
         const newExpense = { name, price };
         setExpenses([...expenses, newExpense]);
         setName("");
         setPrice("");
-      }
+      
     } else {
       alert("You have to fill all required fields");
     }

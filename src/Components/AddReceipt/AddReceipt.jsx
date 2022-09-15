@@ -1,7 +1,7 @@
 import React from "react";
 import "./addReceipt.css";
 
-function Receipt({ addReceipt }, { total }) {
+function Receipt({ addReceipt, total }) {
   return (
     <>
       <div className="container receipt__container">
